@@ -66,7 +66,17 @@ export default {
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				sm: 'calc(var(--radius) - 4px)',
+				'2xl': '1rem'
+			},
+			transitionProperty: {
+				'all': 'all'
+			},
+			transitionDuration: {
+				'200': '200ms'
+			},
+			transitionTimingFunction: {
+				'ease-in-out': 'ease-in-out'
 			},
 			keyframes: {
 				'accordion-down': {
