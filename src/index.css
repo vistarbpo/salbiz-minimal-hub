@@ -109,9 +109,69 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    font-family: 'Unbounded', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
     font-weight: 500;
     letter-spacing: -0.015em;
     line-height: 1.5;
+  }
+}
+
+@layer components {
+  .salbiz-gradient {
+    background-color: hsla(197,92%,60%,1);
+    background-image: radial-gradient(circle at 96% 96%, hsla(55.36363636363636,93%,54%,0.85) 5%,transparent 86%),radial-gradient(circle at 5% 90%, hsla(229,71%,68%,1) 13%,transparent 65%),radial-gradient(circle at 57% 73%, hsla(308,93%,51%,1) 3%,transparent 89%),radial-gradient(circle at 20% 4%, hsla(318,60%,76%,1) 22%,transparent 56%),radial-gradient(circle at 74% 15%, hsla(324,92%,59%,1) 13%,transparent 57%);
+    background-blend-mode: normal,normal,normal,normal,normal;
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    animation: gradientShift 8s ease-in-out infinite;
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    25% {
+      background-position: 100% 50%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    75% {
+      background-position: 0% 100%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .salbiz-gradient:hover {
+    animation: gradientPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes gradientPulse {
+    0%, 100% {
+      background-size: 200% 200%;
+    }
+    50% {
+      background-size: 250% 250%;
+    }
+  }
+
+  .salbiz-hover-gradient {
+    transition: color 0.2s;
+  }
+  .group:hover .salbiz-hover-gradient {
+    background-color: hsla(197,92%,60%,1);
+    background-image: radial-gradient(circle at 96% 96%, hsla(55.36363636363636,93%,54%,0.85) 5%,transparent 86%),radial-gradient(circle at 5% 90%, hsla(229,71%,68%,1) 13%,transparent 65%),radial-gradient(circle at 57% 73%, hsla(308,93%,51%,1) 3%,transparent 89%),radial-gradient(circle at 20% 4%, hsla(318,60%,76%,1) 22%,transparent 56%),radial-gradient(circle at 74% 15%, hsla(324,92%,59%,1) 13%,transparent 57%);
+    background-blend-mode: normal,normal,normal,normal,normal;
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    animation: gradientShift 8s ease-in-out infinite;
   }
 }

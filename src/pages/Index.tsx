@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Globe, Hash, Package } from "lucide-react";
+import { Globe, Hash, Package, Barcode } from "lucide-react";
 
 const Index = () => {
   const projects = [
@@ -10,7 +10,7 @@ const Index = () => {
       url: "https://sherikah.com"
     },
     {
-      icon: Hash,
+      icon: Barcode,
       name: "Barcode.free",
       description: "Tool to generate barcodes in bulk—fast, free, and accurate.",
       url: "https://barcode.free"
@@ -28,10 +28,10 @@ const Index = () => {
       {/* Header */}
       <header className="px-6 py-16 md:px-12 md:py-24 lg:py-32">
         <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-medium text-primary tracking-tight mb-8">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight mb-8 salbiz-gradient">
             Salbiz
           </h1>
-          <p className="text-xl md:text-3xl lg:text-4xl text-muted-foreground font-medium tracking-tight max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-2xl lg:text-3xl text-muted-foreground font-medium tracking-tight max-w-4xl mx-auto leading-relaxed">
             Empowering Micro Ventures with Scalable Tech.
           </p>
         </div>
@@ -40,7 +40,7 @@ const Index = () => {
       {/* About Section */}
       <section className="px-6 md:px-12 py-16 md:py-24">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-lg md:text-2xl lg:text-3xl text-foreground leading-relaxed font-normal tracking-tight">
+          <p className="text-base md:text-lg lg:text-xl text-foreground leading-relaxed font-normal tracking-tight">
             Salbiz is a parent company fostering agile, creative, and scalable web ventures across the digital ecosystem. We craft tools and services that empower entrepreneurs and businesses in the Middle East and beyond—simple, powerful, and built for growth.
           </p>
         </div>
@@ -61,10 +61,10 @@ const Index = () => {
                     <project.icon className="w-12 h-12 lg:w-14 lg:h-14 text-primary group-hover:scale-110 transition-transform duration-200 ease-in-out" />
                   </div>
                   <div>
-                    <h3 className="text-xl lg:text-2xl font-semibold text-card-foreground mb-4 tracking-tight">
+                    <h3 className="text-xl lg:text-2xl font-semibold text-card-foreground mb-4 tracking-tight salbiz-hover-gradient">
                       {project.name}
                     </h3>
-                    <p className="text-muted-foreground text-base lg:text-lg leading-relaxed">
+                    <p className="text-muted-foreground text-sm lg:text-base leading-relaxed font-normal">
                       {project.description}
                     </p>
                   </div>

@@ -1,0 +1,18 @@
+---
+description: Cursor utility rules for consistent UI interactions
+globs:
+  - '**/*.css'
+  - '**/*.tsx'
+alwaysApply: true
+
+rules:
+  base:
+    '*': cursor-default
+    'button, a, [role="button"], [data-role="clickable"]': cursor-pointer
+    '[aria-busy="true"], .is-loading': cursor-wait
+    '[disabled], .disabled': cursor-not-allowed
+    'input[type="text"], textarea, .text-select': cursor-text
+    '[data-tooltip], .help-icon': cursor-help
+    '[draggable="true"], .draggable': cursor-move
+    '.resize-x': cursor-ew-resize
+    '.resize-y': cursor-ns-resize
